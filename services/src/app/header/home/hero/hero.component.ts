@@ -4,7 +4,7 @@ import { SubscribeService } from 'src/app/Services/subscribe.service';
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  providers:[SubscribeService]
+  // providers:[SubscribeService]
 })
 export class HeroComponent {
   constructor(private subservice : SubscribeService){     // HOW TO PROVIDE
