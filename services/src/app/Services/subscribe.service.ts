@@ -1,3 +1,6 @@
+import { Injectable } from "@angular/core"
+
+@Injectable() // not necessary but good to have.
 export class SubscribeService{
     onSubscribeClicked(){
         //add user to db

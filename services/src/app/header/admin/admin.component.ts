@@ -17,6 +17,5 @@ export class AdminComponent {
 
   onCreateUserClickBtn(){
     this.userservice.createUser(this.name,this.gender,this.subType,this.status);
-    console.log(this.userservice.users);
   }
 }
