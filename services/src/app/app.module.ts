@@ -12,6 +12,8 @@ import { UserListComponent } from './header/admin/user-list/user-list.component'
 import { FormsModule } from '@angular/forms';
 import { UserService } from './Services/user.services';
 import { LoggerService } from './Services/logger.service';
+import { UserDetailComponent } from './header/admin/user-detail/user-detail.component';
+// import { TestifyComponent } from './testify/testify.component';
 
 export const USER_TOKEN = new InjectionToken<UserService>('USER_SERVICE');  // create injection token
 
@@ -23,7 +25,9 @@ export const USER_TOKEN = new InjectionToken<UserService>('USER_SERVICE');  // c
     AdminComponent,
     HeroComponent,
     SidebarComponent,
-    UserListComponent
+    UserListComponent,
+    UserDetailComponent,
+    // TestifyComponent
   ],
   imports: [
     BrowserModule,

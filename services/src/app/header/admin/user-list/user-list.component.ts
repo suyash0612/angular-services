@@ -1,4 +1,5 @@
 import { Component, Inject } from '@angular/core';
+import { User } from 'src/app/Models/user';
 import { UserService } from 'src/app/Services/user.services';
 import { USER_TOKEN } from 'src/app/app.module';
 
@@ -12,4 +13,8 @@ export class UserListComponent {
   constructor(@Inject(USER_TOKEN) private userservice:UserService){}   // angular will inject an instance of the service class itself
 
   userList = this.userservice.getAllUsers(); 
+
+  showUserDetailsFromList(user:User){
+    this.userservice.onShowUserDetails(user);
+  }
 }

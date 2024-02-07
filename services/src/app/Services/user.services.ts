@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { EventEmitter, Injectable } from "@angular/core";
 import { User } from "../Models/user";
 import { LoggerService } from "./logger.service";
 
@@ -11,6 +11,12 @@ export class UserService{
     ]; 
 
     constructor(private logger : LoggerService){}
+
+    onUserDetailsClicked : EventEmitter<User> = new EventEmitter<User>();
+
+    onShowUserDetails(user:User){
+        this.onUserDetailsClicked.emit(user)
+    }
 
     getAllUsers(){
         return this.users;
